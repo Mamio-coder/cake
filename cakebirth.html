@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Cake</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .cake {
+            width: 200px;
+            height: 150px;
+            background-color: #fddede;
+            margin: 50px auto;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+
+        .cake::before {
+            content: '';
+            width: 80px;
+            height: 20px;
+            background-color: #fcb9b9;
+            position: absolute;
+            top: -10px;
+            left: 60px;
+            border-radius: 10px;
+        }
+
+        .candle {
+            width: 10px;
+            height: 40px;
+            background-color: yellow;
+            position: absolute;
+            top: -40px;
+            left: 90px;
+        }
+
+        .flame {
+            width: 15px;
+            height: 15px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+            top: -20px;
+            left: 2px;
+            animation: flameAnim 1s infinite alternate;
+        }
+
+        @keyframes flameAnim {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Birthday!</h1>
+    <div class="cake">
+        <div class="candle">
+            <div class="flame"></div>
+        </div>
+    </div>
+</body>
+</html>
